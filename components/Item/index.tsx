@@ -1,23 +1,31 @@
 import Image from 'next/image'
-import imgFlag from '../../assets/svg/flag.svg'
+/*import imgFlag from '../../assets/svg/flag.svg'*/
 
 const Item = () => {
   return (
-    <div className="mb-10 box-border h-80 w-64 rounded-md bg-white shadow-md transition-colors duration-700 dark:bg-oxford-blue">
-      <div className="h-40">
-        <Image src={imgFlag} alt="Flag image" className="rounded-t-md" />
-      </div>
-      <div className="p-4 font-sans text-woodsmoke dark:text-white">
-        <p className="mb-3 text-xl font-extrabold">Germany</p>
-        <div className="flex whitespace-pre text-sm">
+    <div
+      className="mb-20 box-border h-[20.6rem] w-64 cursor-pointer rounded-md bg-white
+      shadow-md transition-colors duration-700 dark:bg-oxford-blue"
+    >
+      <Image
+        src={'https://flagcdn.com/w320/de.png'}
+        alt="Flag image"
+        width={100}
+        height={65}
+        layout="responsive"
+        className="rounded-t-md"
+      />
+      <div className="px-5 py-5 font-sans text-woodsmoke dark:text-white">
+        <p className="mb-3 text-lg font-extrabold">Germany</p>
+        <div className="my-1 flex whitespace-pre text-sm">
           <p className="font-semibold ">Population: </p>
           <p className="font-light">81,770,900</p>
         </div>
-        <div className="flex whitespace-pre text-sm">
+        <div className="my-1 flex whitespace-pre text-sm">
           <p className="font-semibold">Region: </p>
           <p className="font-light">Europe</p>
         </div>
-        <div className="flex whitespace-pre text-sm">
+        <div className="my-1 flex whitespace-pre text-sm">
           <p className="font-semibold">Capital: </p>
           <p className="font-light">Berlin</p>
         </div>

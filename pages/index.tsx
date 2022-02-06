@@ -13,7 +13,7 @@ const Home = () => {
         <meta name="keywords" content="country, countries"></meta>
       </Head>
       <Header />
-      <main className="flex justify-between px-20 pt-10 pb-5">
+      <main className="flex justify-between px-20 pt-11 pb-7">
         <Finder />
         <Filter />
       </main>

@@ -5,7 +5,7 @@ const Filter = () => {
         id="regions"
         name="regions"
         aria-label="Regions"
-        className="w-full rounded-md bg-white py-4 px-2 font-sans 
+        className="w-full rounded-md bg-white py-5 px-2 font-sans text-sm
         font-light text-woodsmoke shadow-md dark:bg-oxford-blue dark:text-white"
       >
         <option value="Africa">Filter by Region</option>
