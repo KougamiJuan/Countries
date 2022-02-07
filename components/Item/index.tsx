@@ -4,8 +4,8 @@ import Image from 'next/image'
 const Item = () => {
   return (
     <div
-      className="mb-20 box-border h-[20.6rem] w-64 cursor-pointer rounded-md bg-white
-      shadow-md transition-colors duration-700 dark:bg-oxford-blue"
+      className="mb-9 box-border h-[20.6rem] w-[16.7rem] cursor-pointer rounded-md bg-white shadow-md transition-colors
+      duration-700 dark:bg-oxford-blue md:mb-20 md:w-64"
     >
       <Image
         src={'https://flagcdn.com/w320/de.png'}
