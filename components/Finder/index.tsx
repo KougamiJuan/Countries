@@ -1,6 +1,6 @@
 import IconSearch from '../../assets/svg/search.svg'
 
-const Finder = () => {
+export default function Finder() {
   return (
     <div className="relative transition-colors duration-700 md:w-1/2 lg:w-[38%]">
       <div className="pointer-events-none absolute left-8 top-4 md:top-5">
@@ -18,5 +18,3 @@ const Finder = () => {
     </div>
   )
 }
-
-export default Finder

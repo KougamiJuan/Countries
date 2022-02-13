@@ -1,4 +1,4 @@
-const Filter = () => {
+export default function Filter() {
   return (
     <div className="relative w-48 transition-colors duration-700">
       <select
@@ -18,5 +18,3 @@ const Filter = () => {
     </div>
   )
 }
-
-export default Filter
