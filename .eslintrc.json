@@ -8,10 +8,7 @@
   "rules": {
     "@typescript-eslint/no-unused-vars": ["error"],
     "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/no-array-constructor": ["error"],
-    "@typescript-eslint/no-empty-function": ["error"],
-    "@typescript-eslint/no-extra-semi": ["error"],
-    "@typescript-eslint/no-loss-of-precision": ["error"]
+    "@typescript-eslint/no-extra-semi": ["error"]
     // "@typescript-eslint/require-await": "error"
     // "@typescript-eslint/no-implied-eval": ["error"]
   }

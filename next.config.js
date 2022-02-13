@@ -4,7 +4,7 @@ const nextConfig = {
 }
 
 const imgDomain = {
-  images: { domains: ['flagcdn.com'] },
+  images: { domains: ['flagcdn.com', 'upload.wikimedia.org'] },
 }
 
 const svgr = {

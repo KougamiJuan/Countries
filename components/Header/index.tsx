@@ -1,9 +1,15 @@
 import IconColorMode from '../../assets/svg/moon-fill.svg'
 import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
-const Header = () => {
+export default function Header() {
+  const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
   const color = theme === 'dark' ? 'light' : 'dark'
+
+  useEffect(() => setMounted(true), [])
+
+  if (!mounted) return null
 
   return (
     <div
@@ -28,5 +34,3 @@ const Header = () => {
     </div>
   )
 }
-
-export default Header
