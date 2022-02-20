@@ -1,12 +1,16 @@
+// Assets
 import Image from 'next/image'
-import Field from '../Field'
+// Interface
 import { Country } from '../../interface/Country'
+// Components
+import Field from '../Field'
 
 export default function Item({ country }: { country: Country }) {
   return (
     <div
-      className="mb-9 box-border h-[20.6rem] w-[16.7rem] cursor-pointer rounded-md
-      bg-white shadow-md transition-colors duration-700 dark:bg-oxford-blue md:mb-20 md:w-64"
+      className="mb-9 box-border h-[20.6rem] w-[16.7rem] cursor-pointer
+      rounded-md bg-white shadow-md transition-colors duration-700
+      dark:bg-oxford-blue md:mb-20 md:w-64"
     >
       <Image
         src={country.flags.png}

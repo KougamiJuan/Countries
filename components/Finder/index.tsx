@@ -1,8 +1,21 @@
+// Assests
 import IconSearch from '../../assets/svg/search.svg'
 
-export default function Finder() {
+export default function Finder({
+  parentCallback,
+}: {
+  parentCallback: (value: string) => void
+}) {
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+    parentCallback(event.target.value)
+    event.preventDefault()
+  }
+
   return (
-    <div className="relative transition-colors duration-700 md:w-1/2 lg:w-[38%]">
+    <div
+      className="relative transition-colors duration-700 md:w-1/2
+      lg:w-[38%]"
+    >
       <div className="pointer-events-none absolute left-8 top-4 md:top-5">
         <IconSearch
           viewBox="0 0 50 50"
@@ -11,9 +24,13 @@ export default function Finder() {
       </div>
       <input
         type="search"
+        autoComplete="new-password"
         placeholder="Search for a country..."
-        className="w-full rounded-md bg-white py-[0.85rem] pr-8 pl-20 font-sans text-xs font-light text-gray shadow-md
-        hover:outline-none focus:outline-none dark:bg-oxford-blue dark:text-white md:py-5 md:text-sm"
+        className="w-full rounded-md bg-white py-[0.85rem] pr-8 pl-20
+        font-sans text-xs font-light text-gray shadow-md hover:outline-none
+        focus:outline-none dark:bg-oxford-blue dark:text-white md:py-5
+        md:text-sm"
+        onChange={handleChange}
       />
     </div>
   )

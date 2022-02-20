@@ -19,3 +19,23 @@ export function getCountriesByLittle(
     ...countries.slice(start.current, end.current),
   ])
 }
+
+export function searchCountry(
+  finderValue: MutableRefObject<string>,
+  filterValue: MutableRefObject<string>,
+  countryList: Array<Country>,
+  setFilterCountry: Dispatch<SetStateAction<Country[]>>
+) {
+  let newCountries = countryList.filter(
+    (country) =>
+      country.name.common
+        .toLowerCase()
+        .indexOf(finderValue.current.toLowerCase()) > -1
+  )
+  if (filterValue.current) {
+    newCountries = newCountries.filter(
+      (country) => country.region === filterValue.current
+    )
+  }
+  setFilterCountry(newCountries)
+}
