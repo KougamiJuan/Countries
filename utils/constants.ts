@@ -1,12 +1,20 @@
 const ENDPOINT = 'https://restcountries.com/v3.1/'
 
-const OPERATION = 'all?'
+const OPERATION_ALL = 'all?'
 
-const FIELDS =
-  // eslint-disable-next-line max-len
-  'fields=flags,name,population,region,subregion,capital,tld,currencies,languages,borders,ccn3'
+const OPERATION_ALPHA = 'alpha/170?'
 
-export const URL_GET_COUNTRIES = ENDPOINT + OPERATION + FIELDS
+const DEFAULT_FIELDS = 'fields=flags,name,population,region,capital,'
+
+const COUNTRY_CODE = 'ccn3'
+
+const COUNTRY_PAGE = 'subregion,tld,currencies,languages,borders'
+
+export const URL_GET_COUNTRIES =
+  ENDPOINT + OPERATION_ALL + DEFAULT_FIELDS + COUNTRY_CODE
+
+export const URL_GET_COUNTRY =
+  ENDPOINT + OPERATION_ALPHA + DEFAULT_FIELDS + COUNTRY_PAGE
 
 export const COUNTERS = {
   start: 0,

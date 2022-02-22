@@ -28,7 +28,7 @@ export default function ListItems({
   const infiniteScroll = (
     <InfiniteScroll
       className="flex flex-wrap justify-center px-14 pt-9 pb-5
-        sm:justify-between md:pt-5 lg:px-40 xl:px-20"
+      sm:justify-between md:pt-5 lg:px-40 xl:px-20"
       dataLength={countryList.length}
       next={fetchMoreData}
       hasMore={true}
@@ -43,7 +43,7 @@ export default function ListItems({
   const filtered = (
     <div
       className="flex flex-wrap justify-center px-14 pt-9 pb-5
-        sm:justify-between md:pt-5 lg:px-40 xl:px-20"
+      sm:justify-between md:pt-5 lg:px-40 xl:px-20"
     >
       {filteredCountries.map((country) => (
         <Item key={country.ccn3} country={country} />
