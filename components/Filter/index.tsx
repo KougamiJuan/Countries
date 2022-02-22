@@ -1,6 +1,8 @@
 // Libraries
 import { useState } from 'react'
 import { Listbox } from '@headlessui/react'
+// Assests
+import ArrowDown from '../../assets/svg/arrow-down.svg'
 // Utils
 import { OPTIONS } from '../../utils/constants'
 
@@ -25,6 +27,12 @@ export default function Filter({
           shadow-md dark:bg-oxford-blue dark:text-white md:py-5 md:text-sm"
         >
           {selectedRegion.label}
+          <div className="pointer-events-none absolute right-1 top-4 md:top-5">
+            <ArrowDown
+              viewBox="0 0 35 35"
+              className="h-6 w-6 fill-woodsmoke dark:fill-white md:h-7 md:w-7"
+            />
+          </div>
         </Listbox.Button>
         <Listbox.Options
           className="absolute z-10 mt-1 w-full rounded-md bg-white px-5
